@@ -26,7 +26,7 @@ desenvolvedores e arquitetos que estão familiarizados com os padrões.
 > com tais padrões pode aplicá-los imediatamente a diferentes problemas de
 > projeto, sem necessidade de redescobri-los.
 >
-> \- Padrões de Projetos - GoF
+> – Padrões de Projetos - GoF
 
 # Motivação
 
