@@ -4,8 +4,19 @@
 
 # Padrões de Projetos implementados em JAVA
 
-[![Build status](https://travis-ci.org/iluwatar/java-design-patterns.svg?branch=master)](https://travis-ci.org/hvpaiva/java-padroes-projeto)
+[![Build Status](https://travis-ci.org/hvpaiva/java-padroes-projeto.svg?branch=master)](https://travis-ci.org/hvpaiva/java-padroes-projeto)
 [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/hvpaiva/java-padroes-projeto/master/LICENSE.md)
+[![quality gate](https://sonarcloud.io/api/project_badges/measure?project=hvpaiva_java-padroes-projeto&metric=alert_status)](https://sonarcloud.io/dashboard?id=hvpaiva_java-padroes-projeto)
+[![reliability](https://sonarcloud.io/api/project_badges/measure?project=hvpaiva_java-padroes-projeto&metric=reliability_rating)](https://sonarcloud.io/component_measures?id=hvpaiva_java-padroes-projeto&metric=reliability_rating)
+[![security](https://sonarcloud.io/api/project_badges/measure?project=hvpaiva_java-padroes-projeto&metric=security_rating)](https://sonarcloud.io/component_measures?id=hvpaiva_java-padroes-projeto&metric=security_rating)
+[![maintainability](https://sonarcloud.io/api/project_badges/measure?project=hvpaiva_java-padroes-projeto&metric=sqale_rating)](https://sonarcloud.io/component_measures?id=hvpaiva_java-padroes-projeto&metric=sqale_rating)
+
+[![bugs](https://sonarcloud.io/api/project_badges/measure?project=hvpaiva_java-padroes-projeto&metric=bugs)](https://sonarcloud.io/component_measures?id=hvpaiva_java-padroes-projeto&metric=Reliability)
+[![code smells](https://sonarcloud.io/api/project_badges/measure?project=hvpaiva_java-padroes-projeto&metric=code_smells)](https://sonarcloud.io/component_measures?id=hvpaiva_java-padroes-projeto&metric=code_smells)
+[![coverage](https://sonarcloud.io/api/project_badges/measure?project=hvpaiva_java-padroes-projeto&metric=coverage)](https://sonarcloud.io/component_measures?id=hvpaiva_java-padroes-projeto&metric=Coverage)
+[![vunerability](https://sonarcloud.io/api/project_badges/measure?project=hvpaiva_java-padroes-projeto&metric=vulnerabilities)](https://sonarcloud.io/component_measures?id=hvpaiva_java-padroes-projeto&metric=vulnerabilities)
+[![duplicated lines](https://sonarcloud.io/api/project_badges/measure?project=hvpaiva_java-padroes-projeto&metric=duplicated_lines_density)](https://sonarcloud.io/component_measures?id=hvpaiva_java-padroes-projeto&metric=duplicated_lines_density)
+
 
 # Introdução
 
