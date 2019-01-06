@@ -158,6 +158,8 @@ public static void main(String[] args) {
 }
 ```
 
+![alt text](./assets/diagrama-abstract-factory.png "Diagrama do Abstract Factory")
+
 ## Applicabilidade
 
 Use o padrão Abstract Factory quando:
