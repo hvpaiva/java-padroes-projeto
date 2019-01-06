@@ -28,7 +28,5 @@ final class RestauranteFactoryMaker {
 	/**
 	 * Para prevenir instanciação.
 	 */
-	private RestauranteFactoryMaker() {
-		throw new UnsupportedOperationException("Não se deve instanciar classes utilitárias!");
-	}
+	private RestauranteFactoryMaker() { }
 }
