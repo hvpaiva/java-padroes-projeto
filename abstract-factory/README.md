@@ -188,6 +188,12 @@ implementação da fábrica concreta; eles não aparecem no código do cliente.
 
 4. _É difícil de suportar novos tipos de produtos._ Estender fábricas abstratas para produzir novos tipos de Produtos não é fácil. Isso se deve ao fato de que a interface de AbstractFactory fixa o conjunto de produtos que podem ser criados. Suportar novos tipos de produto exige estender a interface da fábrica, o que envolve mudar a classe AbstractFactory e todas as suas subclasses.
 
+# Padrões relacionados
+
+- As classes AbstractFactory são freqüentemente implementadas com métodos-fábrica (Factory Method), mas elas também podem ser implementadas usando Prototype.
+
+- Uma fábrica concreta é freqüentemente um singleton.
+
 ## Tutorial
 * [Abstract Factory Pattern Tutorial](https://www.journaldev.com/1418/abstract-factory-design-pattern-in-java) _(em inglês)_
 * [Padrão de Projeto: Abstract Factory](https://www.thiengo.com.br/padrao-de-projeto-abstract-factory)
