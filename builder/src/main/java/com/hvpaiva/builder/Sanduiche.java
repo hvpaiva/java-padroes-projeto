@@ -33,6 +33,69 @@ public final class Sanduiche {
 	}
 
 	/**
+	 * Getters.
+	 *
+	 * @return O tamanho
+	 */
+	public Tamanho getTamanho() {
+		return tamanho;
+	}
+
+	/**
+	 * Getters.
+	 *
+	 * @return A carne
+	 */
+	public CarneTipo getCarne() {
+		return carne;
+	}
+
+	/**
+	 * Getters.
+	 *
+	 * @return O pão
+	 */
+	public PaoTipo getPao() {
+		return pao;
+	}
+
+	/**
+	 * Getters.
+	 *
+	 * @return O queijo
+	 */
+	public QueijoTipo getQueijo() {
+		return queijo;
+	}
+
+	/**
+	 * Getters.
+	 *
+	 * @return Os extras
+	 */
+	public List<Extras> getExtras() {
+		return extras;
+	}
+
+	/**
+	 * Getters.
+	 *
+	 * @return As saladas
+	 */
+	public List<Salada> getSalada() {
+		return salada;
+	}
+
+	/**
+	 * Getters.
+	 *
+	 * @return O molho
+	 */
+	public List<Molho> getMolho() {
+		return molho;
+	}
+
+	/**
 	 * O Builder de sanduíche.
 	 * Ofere métodos necessários para a
 	 * construção passo-a-passo de um sanduíche.
