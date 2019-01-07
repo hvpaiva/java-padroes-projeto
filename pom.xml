@@ -248,7 +248,7 @@
                 </executions>
             </plugin>
 
-            <!--Plugin do Checkstyle. Usando as configurações de estilo do Google-->
+            <!--Plugin do Checkstyle-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
