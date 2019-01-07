@@ -3,25 +3,26 @@ package com.hvpaiva.builder;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class SanduicheTest {
+class SanduicheTest {
 
 	@Test
 	void testeTamanhoFaltando() {
-		assertThrows(IllegalArgumentException.class, () -> new Sanduiche.Builder(null, CarneTipo.BOI, PaoTipo.TRADICIONAL));
+		assertThrows(NullPointerException.class, () -> new Sanduiche.Builder(null, CarneTipo.BOI, PaoTipo.TRADICIONAL));
 	}
 
 	@Test
 	void testeCarneFaltando() {
-		assertThrows(IllegalArgumentException.class, () -> new Sanduiche.Builder(Tamanho.QUINZE_CENTIMETROS, null, PaoTipo.TRADICIONAL));
+		assertThrows(NullPointerException.class, () -> new Sanduiche.Builder(Tamanho.QUINZE_CENTIMETROS, null, PaoTipo.TRADICIONAL));
 	}
 
 	@Test
 	void testePaoFaltando() {
-		assertThrows(IllegalArgumentException.class, () -> new Sanduiche.Builder(Tamanho.QUINZE_CENTIMETROS, CarneTipo.FRANGO, null));
+		assertThrows(NullPointerException.class, () -> new Sanduiche.Builder(Tamanho.QUINZE_CENTIMETROS, CarneTipo.FRANGO, null));
 	}
 
 	@Test
@@ -56,5 +57,42 @@ public class SanduicheTest {
 		assertEquals(extras, sanduiche.getExtras());
 		assertEquals(saladas, sanduiche.getSalada());
 		assertEquals(molhos, sanduiche.getMolho());
+
+		final Sanduiche sandubaSimples = new Sanduiche.Builder(
+				Tamanho.QUINZE_CENTIMETROS,
+				CarneTipo.FRANGO,
+				PaoTipo.TRADICIONAL)
+				.build();
+
+		assertNotNull(sandubaSimples);
+		assertNotNull(sandubaSimples.toString());
+		assertEquals(Tamanho.QUINZE_CENTIMETROS, sandubaSimples.getTamanho());
+		assertEquals(CarneTipo.FRANGO, sandubaSimples.getCarne());
+		assertEquals(PaoTipo.TRADICIONAL, sandubaSimples.getPao());
+		assertNull(sandubaSimples.getQueijo());
+		assertNull(sandubaSimples.getSalada());
+		assertNull(sandubaSimples.getMolho());
+		assertNull(sandubaSimples.getExtras());
 	}
+
+	@Test
+	void testeInvalidBuild() {
+
+		assertThrows(IllegalArgumentException.class, () -> new Sanduiche.Builder(
+				Tamanho.QUINZE_CENTIMETROS,
+				CarneTipo.FRANGO,
+				PaoTipo.TRADICIONAL)
+				.comSalada(Collections.emptyList())
+				.comExtras(Collections.emptyList())
+				.comMolho(Collections.emptyList())
+				.build());
+
+		assertThrows(NullPointerException.class, () -> new Sanduiche.Builder(
+				Tamanho.QUINZE_CENTIMETROS,
+				CarneTipo.FRANGO,
+				PaoTipo.TRADICIONAL)
+				.comQueijo(null)
+				.build());
+	}
+
 }

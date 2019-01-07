@@ -1,6 +1,7 @@
 package com.hvpaiva.builder;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.Validate;
 
 import java.util.List;
 
@@ -37,7 +38,7 @@ public final class Sanduiche {
 	 *
 	 * @return O tamanho
 	 */
-	public Tamanho getTamanho() {
+	Tamanho getTamanho() {
 		return tamanho;
 	}
 
@@ -46,7 +47,7 @@ public final class Sanduiche {
 	 *
 	 * @return A carne
 	 */
-	public CarneTipo getCarne() {
+	CarneTipo getCarne() {
 		return carne;
 	}
 
@@ -55,7 +56,7 @@ public final class Sanduiche {
 	 *
 	 * @return O pão
 	 */
-	public PaoTipo getPao() {
+	PaoTipo getPao() {
 		return pao;
 	}
 
@@ -64,7 +65,7 @@ public final class Sanduiche {
 	 *
 	 * @return O queijo
 	 */
-	public QueijoTipo getQueijo() {
+	QueijoTipo getQueijo() {
 		return queijo;
 	}
 
@@ -73,7 +74,7 @@ public final class Sanduiche {
 	 *
 	 * @return Os extras
 	 */
-	public List<Extras> getExtras() {
+	List<Extras> getExtras() {
 		return extras;
 	}
 
@@ -82,7 +83,7 @@ public final class Sanduiche {
 	 *
 	 * @return As saladas
 	 */
-	public List<Salada> getSalada() {
+	List<Salada> getSalada() {
 		return salada;
 	}
 
@@ -91,7 +92,7 @@ public final class Sanduiche {
 	 *
 	 * @return O molho
 	 */
-	public List<Molho> getMolho() {
+	List<Molho> getMolho() {
 		return molho;
 	}
 
@@ -118,9 +119,12 @@ public final class Sanduiche {
 		 * @param carne O tipo de carne
 		 * @param pao O tipo do pão
 		 */
-		public Builder(Tamanho tamanho, CarneTipo carne, PaoTipo pao) {
-			if (tamanho == null || carne == null || pao == null)
-				throw new IllegalArgumentException("É necessário definir o tamanho, a carne e o pão!");
+		public Builder(Tamanho tamanho,
+		               CarneTipo carne,
+		               PaoTipo pao) {
+			Validate.notNull(tamanho);
+			Validate.notNull(carne);
+			Validate.notNull(pao);
 
 			this.tamanho = tamanho;
 			this.carne = carne;
@@ -133,7 +137,9 @@ public final class Sanduiche {
 		 * @param queijo O tipo de queijo
 		 * @return O builder de sanduíche com queijo
 		 */
-		public Builder comQueijo(QueijoTipo queijo) {
+		Builder comQueijo(QueijoTipo queijo) {
+			Validate.notNull(queijo);
+
 			this.queijo = queijo;
 			return this;
 		}
@@ -144,7 +150,10 @@ public final class Sanduiche {
 		 * @param extras Os extras do sanduíche
 		 * @return O builder de sanduíche com os extras
 		 */
-		public Builder comExtras(List<Extras> extras) {
+		Builder comExtras(List<Extras> extras) {
+			Validate.notNull(extras);
+			Validate.notEmpty(extras);
+
 			this.extras = extras;
 			return this;
 		}
@@ -157,7 +166,10 @@ public final class Sanduiche {
 		 * @return O builder de sanduíche com os
 		 * tipos de salada
 		 */
-		public Builder comSalada(List<Salada> salada) {
+		Builder comSalada(List<Salada> salada) {
+			Validate.notNull(salada);
+			Validate.notEmpty(salada);
+
 			this.salada = salada;
 			return this;
 		}
@@ -170,7 +182,10 @@ public final class Sanduiche {
 		 * @return O builder de sanduíche com os
 		 * tipos de molho
 		 */
-		public Builder comMolho(List<Molho> molho) {
+		Builder comMolho(List<Molho> molho) {
+			Validate.notNull(molho);
+			Validate.notEmpty(molho);
+
 			this.molho = molho;
 			return this;
 		}
@@ -182,7 +197,7 @@ public final class Sanduiche {
 		 *
 		 * @return O sanduíche
 		 */
-		public Sanduiche build() {
+		Sanduiche build() {
 			return new Sanduiche(this);
 		}
 	}
@@ -203,7 +218,7 @@ public final class Sanduiche {
 		if (queijo != null)
 			sb.append("Com queijo ").append(queijo.name().toLowerCase());
 
-		if (extras != null && !extras.isEmpty()) {
+		if (extras != null) {
 			sb.append("; Extras: ");
 
 			String ext = StringUtils.join(
@@ -215,7 +230,7 @@ public final class Sanduiche {
 			sb.append(ext);
 		}
 
-		if (salada != null && !salada.isEmpty()) {
+		if (salada != null) {
 			sb.append("; Salada: ");
 
 			String saladas = StringUtils.join(
@@ -227,7 +242,7 @@ public final class Sanduiche {
 			sb.append(saladas);
 		}
 
-		if (molho != null && !molho.isEmpty()) {
+		if (molho != null) {
 			sb.append("; Molho: ");
 
 			String molhos = StringUtils.join(
