@@ -24,6 +24,7 @@ public class SanduicheTest {
 		assertThrows(IllegalArgumentException.class, () -> new Sanduiche.Builder(Tamanho.QUINZE_CENTIMETROS, CarneTipo.FRANGO, null));
 	}
 
+	@Test
 	void testeBuild() {
 
 		final List<Extras> extras = new ArrayList<>();
@@ -49,6 +50,11 @@ public class SanduicheTest {
 		assertNotNull(sanduiche);
 		assertNotNull(sanduiche.toString());
 		assertEquals(Tamanho.QUINZE_CENTIMETROS, sanduiche.getTamanho());
-
+		assertEquals(CarneTipo.BOI, sanduiche.getCarne());
+		assertEquals(PaoTipo.ITALIANO, sanduiche.getPao());
+		assertEquals(QueijoTipo.PRATO, sanduiche.getQueijo());
+		assertEquals(extras, sanduiche.getExtras());
+		assertEquals(saladas, sanduiche.getSalada());
+		assertEquals(molhos, sanduiche.getMolho());
 	}
 }
