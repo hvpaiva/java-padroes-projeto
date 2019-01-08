@@ -5,7 +5,7 @@
 # Padrões de Projetos implementados em JAVA
 
 [![Build Status](https://travis-ci.org/hvpaiva/java-padroes-projeto.svg?branch=master)](https://travis-ci.org/hvpaiva/java-padroes-projeto)
-[![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/hvpaiva/java-padroes-projeto/master/LICENSE.md)
+[![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/hvpaiva/java-padroes-projeto/blob/master/LICENCE.md)
 [![quality gate](https://sonarcloud.io/api/project_badges/measure?project=hvpaiva_java-padroes-projeto&metric=alert_status)](https://sonarcloud.io/dashboard?id=hvpaiva_java-padroes-projeto)
 [![reliability](https://sonarcloud.io/api/project_badges/measure?project=hvpaiva_java-padroes-projeto&metric=reliability_rating)](https://sonarcloud.io/component_measures?id=hvpaiva_java-padroes-projeto&metric=reliability_rating)
 [![security](https://sonarcloud.io/api/project_badges/measure?project=hvpaiva_java-padroes-projeto&metric=security_rating)](https://sonarcloud.io/component_measures?id=hvpaiva_java-padroes-projeto&metric=security_rating)
