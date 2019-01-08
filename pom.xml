@@ -29,6 +29,7 @@
     <modules>
         <module>abstract-factory</module>
         <module>builder</module>
+        <module>prototype</module>
     </modules>
 
     <!--Controle de Dependências para submódulos-->
