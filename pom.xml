@@ -4,41 +4,26 @@
 
     <groupId>com.hvpaiva</groupId>
     <artifactId>java-padroes-projeto</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.6.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <inceptionYear>2019</inceptionYear>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <hibernate.version>5.0.1.Final</hibernate.version>
-        <spring.version>4.2.4.RELEASE</spring.version>
-        <spring-boot.version>1.3.3.RELEASE</spring-boot.version>
-        <spring-data.version>1.9.2.RELEASE</spring-data.version>
-        <h2.version>1.4.190</h2.version>
+        <java.version>1.8</java.version>
         <junit.version>4.12</junit.version>
         <junit-jupiter.version>5.0.2</junit-jupiter.version>
-        <junit-vintage.version>${junit.version}.2</junit-vintage.version>
         <junit-platform.version>1.0.2</junit-platform.version>
-        <sping-test-junit5.version>1.0.2</sping-test-junit5.version>
         <compiler.version>3.0</compiler.version>
         <jacoco.version>0.8.2</jacoco.version>
-        <commons-dbcp.version>1.4</commons-dbcp.version>
-        <guava.version>19.0</guava.version>
-        <mockito.version>1.10.19</mockito.version>
-        <apache-httpcomponents.version>4.5.2</apache-httpcomponents.version>
-        <htmlunit.version>2.22</htmlunit.version>
-        <guice.version>4.0</guice.version>
-        <mongo-java-driver.version>3.3.0</mongo-java-driver.version>
-        <slf4j.version>1.7.21</slf4j.version>
-        <logback.version>1.1.7</logback.version>
-        <aws-lambda-core.version>1.1.0</aws-lambda-core.version>
-        <aws-java-sdk-dynamodb.version>1.11.289</aws-java-sdk-dynamodb.version>
-        <aws-lambda-log4j.version>1.0.0</aws-lambda-log4j.version>
-        <aws-lambda-java-events.version>2.0.1</aws-lambda-java-events.version>
-        <jackson.version>2.8.5</jackson.version>
         <lombok.version>1.18.4</lombok.version>
+        <slf4j.version>1.8.0-beta2</slf4j.version>
         <commons-lang.version>3.0</commons-lang.version>
         <javax-validation.version>1.0.0.GA</javax-validation.version>
+        <pmd.version>3.6</pmd.version>
+        <checkstyle.version>2.17</checkstyle.version>
+        <surefire.version>2.19.1</surefire.version>
+        <licence-maven.version>2.11</licence-maven.version>
     </properties>
 
     <modules>
@@ -46,94 +31,18 @@
         <module>builder</module>
     </modules>
 
-    <repositories>
-        <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
-        </repository>
-    </repositories>
-
+    <!--Controle de Dependências para submódulos-->
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>${lombok.version}</version>
-                <scope>provided</scope>
-            </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>${commons-lang.version}</version>
             </dependency>
             <dependency>
-                <groupId>javax.validation</groupId>
-                <artifactId>validation-api</artifactId>
-                <version>${javax-validation.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.hibernate</groupId>
-                <artifactId>hibernate-core</artifactId>
-                <version>${hibernate.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.hibernate</groupId>
-                <artifactId>hibernate-entitymanager</artifactId>
-                <version>${hibernate.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring-boot.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.data</groupId>
-                <artifactId>spring-data-jpa</artifactId>
-                <version>${spring-data.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-webmvc</artifactId>
-                <version>${spring.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-web</artifactId>
-                <version>${spring-boot.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.httpcomponents</groupId>
-                <artifactId>httpclient</artifactId>
-                <version>${apache-httpcomponents.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.h2database</groupId>
-                <artifactId>h2</artifactId>
-                <version>${h2.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>commons-dbcp</groupId>
-                <artifactId>commons-dbcp</artifactId>
-                <version>${commons-dbcp.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.junit.jupiter</groupId>
-                <artifactId>junit-jupiter-api</artifactId>
-                <version>${junit-jupiter.version}</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>${junit.version}</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.junit.jupiter</groupId>
-                <artifactId>junit-jupiter-engine</artifactId>
-                <version>${junit-jupiter.version}</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
@@ -149,46 +58,14 @@
                 <scope>test</scope>
             </dependency>
             <dependency>
-                <groupId>org.junit.vintage</groupId>
-                <artifactId>junit-vintage-engine</artifactId>
-                <version>${junit-vintage.version}</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>com.github.sbrannen</groupId>
-                <artifactId>spring-test-junit5</artifactId>
-                <version>${sping-test-junit5.version}</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.mockito</groupId>
-                <artifactId>mockito-core</artifactId>
-                <version>${mockito.version}</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>com.google.guava</groupId>
-                <artifactId>guava</artifactId>
-                <version>${guava.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>net.sourceforge.htmlunit</groupId>
-                <artifactId>htmlunit</artifactId>
-                <version>${htmlunit.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.google.inject</groupId>
-                <artifactId>guice</artifactId>
-                <version>${guice.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.mongodb</groupId>
-                <artifactId>mongo-java-driver</artifactId>
-                <version>${mongo-java-driver.version}</version>
+                <groupId>javax.validation</groupId>
+                <artifactId>validation-api</artifactId>
+                <version>${javax-validation.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
 
+    <!--Dependências globais do projeto-->
     <dependencies>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -196,33 +73,26 @@
             <version>${slf4j.version}</version>
         </dependency>
         <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>${logback.version}</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit-jupiter.version}</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-core</artifactId>
-            <version>${logback.version}</version>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit-jupiter.version}</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>javax.validation</groupId>
-            <artifactId>validation-api</artifactId>
+            <optional>true</optional>
         </dependency>
     </dependencies>
 
     <build>
-        <pluginManagement>
-            <plugins>
-            </plugins>
-        </pluginManagement>
-
         <plugins>
             <!-- Compilar Java 8 -->
             <plugin>
@@ -230,10 +100,12 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${compiler.version}</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                 </configuration>
             </plugin>
+
+            <!--Plugin de code coverage-->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
@@ -252,7 +124,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>2.17</version>
+                <version>${checkstyle.version}</version>
                 <executions>
                     <execution>
                         <id>validate</id>
@@ -263,7 +135,7 @@
                         <configuration>
                             <configLocation>checkstyle.xml</configLocation>
                             <suppressionsLocation>checkstyle-suppressions.xml</suppressionsLocation>
-                            <encoding>UTF-8</encoding>
+                            <encoding>${project.build.sourceEncoding}</encoding>
                             <consoleOutput>true</consoleOutput>
                             <failsOnError>true</failsOnError>
                             <includeTestSourceDirectory>true</includeTestSourceDirectory>
@@ -271,10 +143,12 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <!--Plugin para rodar os testes unitários-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.19.1</version>
+                <version>${surefire.version}</version>
                 <dependencies>
                     <dependency>
                         <groupId>org.junit.platform</groupId>
@@ -286,10 +160,12 @@
                     <argLine>-Xmx1024M ${argLine}</argLine>
                 </configuration>
             </plugin>
+
+            <!--Plugin de Qualidade de Código-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.6</version>
+                <version>${pmd.version}</version>
                 <configuration>
                     <failOnViolation>true</failOnViolation>
                     <failurePriority>5</failurePriority>
@@ -307,10 +183,11 @@
                 </executions>
             </plugin>
 
+            <!--Plugin para incluir licença ao build-->
             <plugin>
                 <groupId>com.mycila</groupId>
                 <artifactId>license-maven-plugin</artifactId>
-                <version>2.11</version>
+                <version>${licence-maven.version}</version>
                 <configuration>
                     <header>com/mycila/maven/plugin/license/templates/MIT.txt</header>
                     <properties>
@@ -336,7 +213,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.6</version>
+                <version>${pmd.version}</version>
             </plugin>
         </plugins>
     </reporting>
