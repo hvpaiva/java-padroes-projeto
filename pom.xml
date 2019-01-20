@@ -29,6 +29,7 @@
     <modules>
         <module>abstract-factory</module>
         <module>builder</module>
+        <module>factory-method</module>
     </modules>
 
     <!--Controle de Dependências para submódulos-->
@@ -67,11 +68,6 @@
 
     <!--Dependências globais do projeto-->
     <dependencies>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>

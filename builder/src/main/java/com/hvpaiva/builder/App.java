@@ -1,6 +1,6 @@
 package com.hvpaiva.builder;
 
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.java.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Classe com main.
  */
-@Slf4j
+@Log
 public final class App {
 
 	/**
