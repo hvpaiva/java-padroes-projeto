@@ -1,0 +1,19 @@
+@startuml
+
+interface Prototype {
+    + clone()
+}
+
+class PrototypeConcreto1
+class PrototypeConcreto2
+
+class Cliente {
+    + operacao()
+}
+
+Cliente -> Prototype
+
+Prototype <|-- PrototypeConcreto1
+Prototype <|-- PrototypeConcreto2
+
+@enduml
