@@ -11,6 +11,8 @@ package com.hvpaiva.singleton;
  */
 final class InitializingOnDemandHolderIdiom {
 
+	private static final String DESCRICAO = "Initializing On Demand Holder Idiom";
+
 	/**
 	 * Construtor privado para evitar instanciação.
 	 */
@@ -22,6 +24,14 @@ final class InitializingOnDemandHolderIdiom {
 	 */
 	public static InitializingOnDemandHolderIdiom getInstance() {
 		return HelperHolder.INSTANCE;
+	}
+
+	/**
+	 * Método não estático qualquer do singleton.
+	 * @return A descrição
+	 */
+	public String getDescription() {
+		return DESCRICAO;
 	}
 
 	/**

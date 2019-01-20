@@ -11,15 +11,9 @@ final class ThreadSafeLazyLoadedVencedor {
 	private static ThreadSafeLazyLoadedVencedor instance;
 
 	/**
-	 * Construtor padrão.
-	 * Protege contra instanciação via chamada reflection.
+	 * Construtor padrão privado.
 	 */
 	private ThreadSafeLazyLoadedVencedor() {
-		if (instance == null) {
-			instance = this;
-		} else {
-			throw new IllegalStateException("Já inicializado.");
-		}
 	}
 
 	/**
