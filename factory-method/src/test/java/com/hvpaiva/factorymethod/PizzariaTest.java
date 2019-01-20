@@ -1,4 +1,5 @@
-import com.hvpaiva.factorymethod.Pizzaria;
+package com.hvpaiva.factorymethod;
+
 import org.junit.jupiter.api.Test;
 
 class PizzariaTest {

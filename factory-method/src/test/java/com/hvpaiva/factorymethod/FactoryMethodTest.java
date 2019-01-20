@@ -1,7 +1,5 @@
-import com.hvpaiva.factorymethod.NormalPizzaiolo;
-import com.hvpaiva.factorymethod.Pizza;
-import com.hvpaiva.factorymethod.Pizzaiolo;
-import com.hvpaiva.factorymethod.VeganPizzaiolo;
+package com.hvpaiva.factorymethod;
+
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
