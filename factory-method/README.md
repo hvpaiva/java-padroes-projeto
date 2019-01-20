@@ -83,8 +83,6 @@ public class App {
 }
 ```
 
-
-
 ![alt text](./assets/diagrama-factory-method.png "Diagrama do Factory Method")
 
 ## Applicabilidade
@@ -106,9 +104,9 @@ Use o padrão Factory Method quando:
 - **Prototypes** não exigem subclassificação de Creator. Contudo, freqüentemente necessitam uma operação Initialize na classe Product. A Creator usa Initialize para iniciar o objeto. O Factory Method não exige uma operação desse tipo.
 
 ## Tutorial
-* [Abstract Factory Pattern Tutorial](https://www.journaldev.com/1418/abstract-factory-design-pattern-in-java) _(em inglês)_
-* [Padrão de Projeto: Abstract Factory](https://www.thiengo.com.br/padrao-de-projeto-abstract-factory)
-* [Padrão Abstract Factory](https://www.devmedia.com.br/padrao-abstract-factory/23030)
+* [actory Method Design Pattern](https://sourcemaking.com/design_patterns/factory_method) _(em inglês)_
+* [Padrão de Projeto: Factory Method](https://www.thiengo.com.br/padrao-de-projeto-factory-method)
+* [Padrão de Projeto Factory Method em Java](https://www.devmedia.com.br/padrao-de-projeto-factory-method-em-java/26348)
 
 ## Exemplos reais
 

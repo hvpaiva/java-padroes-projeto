@@ -3,14 +3,14 @@
 interface Pizza
 
 interface Pizzaiolo {
-    criarPizza(): Pizza
+    + criarPizza(): Pizza
 }
 
 class VeganPizzaiolo {
-     criarPizza(): VeganPizza
+    + criarPizza(): VeganPizza
 }
 class NormalPizzaiolo {
-    criarPizza(): NormalPizza
+    + criarPizza(): NormalPizza
 }
 
 class VeganPizza
