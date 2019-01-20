@@ -1,11 +1,11 @@
 package com.hvpaiva.abstractfactory;
 
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.java.Log;
 
 /**
  * Classe principal da aplicação.
  */
-@Slf4j
+@Log
 public class App {
 
 	private Prato prato;

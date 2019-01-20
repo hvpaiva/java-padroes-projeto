@@ -115,6 +115,8 @@ e poderemos usá-lo da seguinte forma:
 Sanduiche sandubaSemSalada = new Sanduiche.Builder(Tamanho.TRINTA_CENTIMETROS, CarneTipo.FRANGO, PaoTipo.QUATRO_QUEIJOS).comQueijo(QueijoTipo.MUSSARELA).build();
 ```
 
+![alt text](./assets/diagrama-builder.png "Diagrama do Builder")
+
 ## Applicabilidade
 
 Use o padrão Builder quando:
