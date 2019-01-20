@@ -8,17 +8,12 @@ package com.hvpaiva.singleton;
  */
 final class ThreadSafeDoubleCheckLocking {
 
-	private static volatile ThreadSafeDoubleCheckLocking instance;
+	private static ThreadSafeDoubleCheckLocking instance;
 
 	/**
 	 * Construtor privado para prevenir instanciação.
-	 * Proteção contra instanciação via reflection
 	 */
-	private ThreadSafeDoubleCheckLocking() {
-		if (instance != null) {
-			throw new IllegalStateException("Already initialized.");
-		}
-	}
+	private ThreadSafeDoubleCheckLocking() { }
 
 	/**
 	 * Acessor publico.
