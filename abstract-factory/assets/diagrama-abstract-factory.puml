@@ -1,0 +1,54 @@
+@startuml
+
+interface RestauranteFactory {
+    + criaPrato(): Prato
+    + criaDecoracao(): Decoracao
+    + criaMusica(): Musica
+}
+
+interface Prato
+interface Decoracao
+interface Musica
+
+class PratoItaliano
+class MusicaItaliana
+class DecoracaoItaliana
+
+class PratoMexicano
+class DecoracaoMexicana
+class MusicaMexicana
+
+class RestauranteItalianoFactory {
+    + criaPrato(): Prato
+    + criaDecoracao(): Decoracao
+    + criaMusica(): Musica
+}
+
+class RestauranteMexicanoFactory {
+    + criaPrato(): Prato
+    + criaDecoracao(): Decoracao
+    + criaMusica(): Musica
+}
+
+Prato <|--- PratoItaliano
+Prato <|--- PratoMexicano
+
+Decoracao <|--- DecoracaoItaliana
+Decoracao <|--- DecoracaoMexicana
+
+Musica <|--- MusicaItaliana
+Musica <|--- MusicaMexicana
+
+RestauranteFactory <|--- RestauranteItalianoFactory
+RestauranteFactory <|--- RestauranteMexicanoFactory
+
+RestauranteItalianoFactory --- PratoItaliano : criarPrato >
+RestauranteItalianoFactory --- DecoracaoItaliana : criarDecoracao >
+RestauranteItalianoFactory --- MusicaItaliana : criarMusica >
+
+RestauranteMexicanoFactory --- PratoMexicano : criarPrato >
+RestauranteMexicanoFactory --- DecoracaoMexicana : criarDecoracao >
+RestauranteMexicanoFactory --- MusicaMexicana : criarMusica >
+
+
+@enduml

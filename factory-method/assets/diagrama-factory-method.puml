@@ -1,0 +1,29 @@
+@startuml
+
+interface Pizza
+
+interface Pizzaiolo {
+    + criarPizza(): Pizza
+}
+
+class VeganPizzaiolo {
+    + criarPizza(): VeganPizza
+}
+class NormalPizzaiolo {
+    + criarPizza(): NormalPizza
+}
+
+class VeganPizza
+class NormalPizza
+
+Pizza <|--- NormalPizza
+Pizza <|--- VeganPizza
+
+Pizzaiolo <|--- VeganPizzaiolo
+Pizzaiolo <|--- NormalPizzaiolo
+
+VeganPizzaiolo --- VeganPizza : cria >
+NormalPizzaiolo --- NormalPizza : cria >
+
+
+@enduml

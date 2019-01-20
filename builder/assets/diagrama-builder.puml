@@ -1,0 +1,44 @@
+@startuml
+
+interface Produto
+
+class Sanduiche {
+    - Tamanho tamanho
+    - CarneTipo carne
+    - PaoTipo pao
+    - QueijoTipo queijo
+    - List<Molho> molhos
+    - List<Salada> saladas
+    - List<Extras> extras
+    + Sanduiche(Builder builder)
+}
+
+'enum Tamanho
+'enum CarneTipo
+'enum PaoTipo
+'enum QueijoTipo
+'enum Salada
+'enum Molho
+'enum Extras
+
+interface Builder {
+    build(): Produto
+}
+
+class SanduicheBuilder {
+     + Builder(Tamanho, CarneTipo, PaoTipo)
+     + comQueijo(QueijoTipo): Builder
+     + comSalada(Salada): Builder
+     + comMolho(Molho): Builder
+     + comExtras(Extras): Builder
+     + build(): Sanduiche
+}
+
+Builder <|--- SanduicheBuilder
+Produto <|--- Sanduiche
+
+Sanduiche o- SanduicheBuilder : constroi <
+Produto o- Builder : constroi <
+
+
+@enduml
