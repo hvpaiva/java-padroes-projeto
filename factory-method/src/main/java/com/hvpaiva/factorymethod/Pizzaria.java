@@ -1,7 +1,6 @@
 package com.hvpaiva.factorymethod;
 
 import lombok.extern.java.Log;
-import lombok.extern.slf4j.Slf4j;
 
 /**
  * O Factory Method é um padrão de design de criação que usa métodos de fábrica
